@@ -25,6 +25,9 @@ var calendarChart = dc.calendarChart('#daily-volume-chart');
 ```
 //Set your crossfilter dimension and group map-reduce functions
 
+//Import data via your AJAX methods or use one of d3's convenient shortcut methods
+
+var ndx = crossfilter(data);
 var calendarDimension = ndx.dimension(function (datum) {
         //("%Y-%m-%d")
         return datum.calDate;
