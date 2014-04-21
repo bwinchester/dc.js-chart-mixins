@@ -29,8 +29,9 @@ _chart._doRedraw = function() {
 };
 
 _chart._doRender = function () {
-
-	_chart.root().html('');
+	d3.select("#"+ _chart.anchorName())
+		.selectAll("svg")
+		.remove();
 
 	var svg = d3.select("#"+ _chart.anchorName())
 		.selectAll("svg")
