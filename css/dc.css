@@ -310,12 +310,19 @@ div.dc-chart {
   fill: #eeeeee;
   stroke: #fff;
   cursor: pointer;
-}
-.day-deselected{
-  fill: red;
+  -webkit-transition: fill 500ms linear;
+  -moz-transition: fill 500ms linear;
+  -o-transition: fill 500ms linear;
+  -ms-transition: fill 500ms linear;
+  transition: fill 500ms linear;
 }
 .day.day-deselected{
- fill: #cccccc!important;
+  fill: #cccccc!important;
+  -webkit-transition: fill 500ms linear;
+  -moz-transition: fill 500ms linear;
+  -o-transition: fill 500ms linear;
+  -ms-transition: fill 500ms linear;
+  transition: fill 500ms linear;
 }
 .month {
   fill: none;
