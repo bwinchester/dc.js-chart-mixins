@@ -151,13 +151,13 @@ d3.csv("ndx.csv", function (data) {
     // summerize volume by quarter
     var quarter = ndx.dimension(function (d) {
         var month = d.dd.getMonth();
-        if (month <= 2)
+        if (month < 3)
             return "Q1";
-        else if (month > 3 && month <= 5)
+        else if (month > 2 && month < 6)
             return "Q2";
-        else if (month > 5 && month <= 8)
+        else if (month > 5 && month < 9)
             return "Q3";
-        else
+        else if (month > 8)
             return "Q4";
     });
     var quarterGroup = quarter.group().reduceSum(function (d) {
